@@ -17,6 +17,6 @@ index 5ad9cd6..d4a785d 100644
  distributed >= 2021.6.2
 -zmq
 +pyzmq
- fvgp == 3.3.7
+ fvgp == 3.3.8
  plotly
  notebook
