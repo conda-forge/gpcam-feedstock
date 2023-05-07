@@ -1,5 +1,5 @@
 {% set name = "gpcam" %}
-{% set version = "7.4.8" %}
+{% set version = "7.4.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lbl-camera/gpCAM/archive/{{ version }}.tar.gz
-  sha256: 765ef7acc1563018febd62ccf66499b813db6b0eda102dd2331779c1e91309da
+  sha256: 9f70c361bd3e56f98de2e8f994a9be64fdebf32941e40c54545a703774ac6718
   patches:
     - zmq.patch
     - dep.patch
@@ -15,7 +15,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -32,7 +32,7 @@ requirements:
     - dask-core >=2021.6.2
     - distributed >=2021.6.2
     - pyzmq
-    - fvgp ==3.3.7
+    - fvgp ==3.3.8
     - plotly
     - notebook
     - loguru
