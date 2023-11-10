@@ -1,5 +1,5 @@
 {% set name = "gpcam" %}
-{% set version = "7.4.10" %}
+{% set version = "8.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lbl-camera/gpCAM/archive/{{ version }}.tar.gz
-  sha256: 4861d4d3e7d4cdcf4713548be096573095e10eb4daaa33f170cdb0a83b7650d0
+  sha256: cf67fd021c7e71967882985dfc6260345290d35207c0aa9fa836f5c0f37a43e5
   patches:
     - zmq.patch
     - dep.patch
