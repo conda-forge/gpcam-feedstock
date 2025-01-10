@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lbl-camera/gpCAM/archive/{{ version }}.tar.gz
-  sha256: 4861d4d3e7d4cdcf4713548be096573095e10eb4daaa33f170cdb0a83b7650d0
+  sha256: 9429be06da6f6695353f5dd216a630ab6039feb2f0864ff97c4e3e42104bc54b
   patches:
     - zmq.patch
     - dep.patch
@@ -21,6 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - numpy
