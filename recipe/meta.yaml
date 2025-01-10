@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lbl-camera/gpCAM/archive/{{ version }}.tar.gz
-  sha256: 4861d4d3e7d4cdcf4713548be096573095e10eb4daaa33f170cdb0a83b7650d0
+  sha256: 9429be06da6f6695353f5dd216a630ab6039feb2f0864ff97c4e3e42104bc54b
   patches:
     - zmq.patch
     - dep.patch
@@ -15,15 +15,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
-    - numpy
+    - python >={{ python_min }}
+    - numpy <1.25.0,>=1.18.5
     - scipy ==1.9.1
     - matplotlib-base
     - pytorch >=1.9.0
@@ -44,6 +45,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://gpcam.lbl.gov
