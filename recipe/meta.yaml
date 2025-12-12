@@ -8,9 +8,6 @@ package:
 source:
   url: https://github.com/lbl-camera/gpCAM/archive/{{ version }}.tar.gz
   sha256: 0959e1d30e36e802ee9022113f35449e635ee11bd3e31e5846111f747fd7e30f
-  patches:
-    - zmq.patch
-    - dep.patch
 
 build:
   noarch: python
@@ -24,18 +21,11 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - numpy <1.25.0,>=1.18.5
-    - scipy ==1.9.1
-    - matplotlib-base
-    - pytorch >=1.9.0
-    - pandas
-    - ophyd
-    - dask-core >=2021.6.2
-    - distributed >=2021.6.2
-    - pyzmq
-    - fvgp ==3.3.8
-    - plotly
-    - notebook
+    - numpy <2.2.7,>=2.2.6
+    - scipy >=1.16.0,<1.17
+    - dask-core >=2025.5.1
+    - distributed >=2025.5.1
+    - fvgp =4.7.5
     - loguru
 
 test:
