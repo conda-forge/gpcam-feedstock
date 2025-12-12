@@ -1,5 +1,6 @@
 {% set name = "gpcam" %}
 {% set version = "8.3.4" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -18,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
     - numpy <2.2.7,>=2.2.6
