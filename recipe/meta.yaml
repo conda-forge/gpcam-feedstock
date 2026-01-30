@@ -20,6 +20,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - hatchling
+    - hatch-vcs
   run:
     - python >={{ python_min }}
     - numpy <2.3.0,>=2.2.6
