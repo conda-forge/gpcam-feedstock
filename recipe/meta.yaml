@@ -27,7 +27,7 @@ requirements:
     - scipy <1.17.0,>=1.16.0
     - dask-core >=2025.5.1,<2025.6.dev0
     - distributed >=2025.5.1,<2025.6.dev0
-    - fvgp >=4.7.7
+    - fvgp >=4.7.7,<7
     - loguru
 
 test:
