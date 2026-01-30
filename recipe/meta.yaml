@@ -1,41 +1,33 @@
 {% set name = "gpcam" %}
-{% set version = "7.4.10" %}
+{% set version = "8.3.5" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/lbl-camera/gpCAM/archive/{{ version }}.tar.gz
-  sha256: 9429be06da6f6695353f5dd216a630ab6039feb2f0864ff97c4e3e42104bc54b
-  patches:
-    - zmq.patch
-    - dep.patch
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gpcam-{{ version }}.tar.gz
+  sha256: 85e350acdd03c0245571cc536849d0344afb2e52532a642785db9cf42ab96c4c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - hatchling
+    - hatch-vcs
   run:
     - python >={{ python_min }}
-    - numpy <1.25.0,>=1.18.5
-    - scipy ==1.9.1
-    - matplotlib-base
-    - pytorch >=1.9.0
-    - pandas
-    - ophyd
-    - dask-core >=2021.6.2
-    - distributed >=2021.6.2
-    - pyzmq
-    - fvgp ==3.3.8
-    - plotly
-    - notebook
+    - numpy <2.3.0,>=2.2.6
+    - scipy <1.17.0,>=1.16.0
+    - dask-core >=2025.5.1,<2025.6.dev0
+    - distributed >=2025.5.1,<2025.6.dev0
+    - fvgp >=4.7.7,<7
     - loguru
 
 test:
