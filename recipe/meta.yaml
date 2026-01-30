@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/lbl-camera/gpCAM/archive/{{ version }}.tar.gz
-  sha256: 053ba45f7f0b6a7f1c42d88712d10b018ef0853bdbaf4f1bad18ec2d906cff8c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gpcam-{{ version }}.tar.gz
+  sha256: 85e350acdd03c0245571cc536849d0344afb2e52532a642785db9cf42ab96c4c
 
 build:
   noarch: python
@@ -25,16 +25,9 @@ requirements:
     - python >={{ python_min }}
     - numpy <2.3.0,>=2.2.6
     - scipy <1.17.0,>=1.16.0
-    - matplotlib-base
-    - pytorch >=1.9.0
-    - pandas
-    - ophyd
-    - dask-core >=2025.5.1
-    - distributed >=2025.5.1
-    - pyzmq
+    - dask-core >=2025.5.1,<2025.6.dev0
+    - distributed >=2025.5.1,<2025.6.dev0
     - fvgp >=4.7.7
-    - plotly
-    - notebook
     - loguru
 
 test:
