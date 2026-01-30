@@ -9,9 +9,6 @@ package:
 source:
   url: https://github.com/lbl-camera/gpCAM/archive/{{ version }}.tar.gz
   sha256: 053ba45f7f0b6a7f1c42d88712d10b018ef0853bdbaf4f1bad18ec2d906cff8c
-  patches:
-    - zmq.patch
-    - dep.patch
 
 build:
   noarch: python
