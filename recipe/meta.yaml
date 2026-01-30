@@ -1,5 +1,6 @@
 {% set name = "gpcam" %}
 {% set version = "8.3.5" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -21,19 +22,19 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
-    - numpy <1.25.0,>=1.18.5
-    - scipy ==1.9.1
+    - numpy <2.3.0,>=2.2.6
+    - scipy <1.17.0,>=1.16.0
     - matplotlib-base
     - pytorch >=1.9.0
     - pandas
     - ophyd
-    - dask-core >=2021.6.2
-    - distributed >=2021.6.2
+    - dask-core >=2025.5.1
+    - distributed >=2025.5.1
     - pyzmq
-    - fvgp ==3.3.8
+    - fvgp >=4.7.7
     - plotly
     - notebook
     - loguru
