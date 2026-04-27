@@ -3,7 +3,7 @@ About gpcam-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gpcam-feedstock/blob/main/LICENSE.txt)
 
-Home: https://gpcam.lbl.gov
+Home: https://gpcam.lbl.gov/
 
 Package license: GPL-3.0-or-later
 
@@ -13,11 +13,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19358&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gpcam-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
