@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gpcam
-  version: "8.4.0"
+  version: "8.4.1"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/gpcam-${{ version }}.tar.gz
-  sha256: 9dbcb9421a14e56288fa8ba54dfaf0b92107061aa50ca94225d0abad73eda980
+  sha256: 7ecae926713435247e219adf47ff82bbce93a9faf88f5f50f410dfb9f044432c
 
 build:
   number: 0
