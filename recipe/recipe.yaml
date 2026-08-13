@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gpcam
-  version: "8.4.3"
+  version: "8.5.0"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/gpcam-${{ version }}.tar.gz
-  sha256: 6f85de3504186a8985d3688c3e463e7dbfb334bf8c60a46667982eea7354024d
+  sha256: d055e6458f3276dfaea7b93b0e7bef608e4a6d55c67028b2f9806439136e6754
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - scipy <1.17.0,>=1.16.0
     - dask-core >=2025.5.1,<2025.6.dev0
     - distributed >=2025.5.1,<2025.6.dev0
-    - fvgp =4.8.5
+    - fvgp =4.8.8
     - loguru
 
 tests:
@@ -38,7 +38,9 @@ tests:
       imports:
         - gpcam
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version: 
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: gpCAM is a code for autonomous data acquisition
