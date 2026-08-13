@@ -30,7 +30,7 @@ requirements:
     - scipy <1.17.0,>=1.16.0
     - dask-core >=2025.5.1,<2025.6.dev0
     - distributed >=2025.5.1,<2025.6.dev0
-    - fvgp =4.8.5
+    - fvgp =4.8.8
     - loguru
 
 tests:
@@ -38,7 +38,9 @@ tests:
       imports:
         - gpcam
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version: 
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: gpCAM is a code for autonomous data acquisition
