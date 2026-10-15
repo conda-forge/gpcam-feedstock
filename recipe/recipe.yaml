@@ -2,8 +2,7 @@ schema_version: 1
 
 context:
   name: gpcam
-  version: "8.5.0"
-  python_min: "3.11"
+  version: "8.6.1"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/gpcam-${{ version }}.tar.gz
-  sha256: d055e6458f3276dfaea7b93b0e7bef608e4a6d55c67028b2f9806439136e6754
+  sha256: c77046af42d251f467d732ae7a6df4c9a6445df0c55a3efa988b2f8f81808605
 
 build:
   number: 0
@@ -30,7 +29,7 @@ requirements:
     - scipy <1.17.0,>=1.16.0
     - dask-core >=2025.5.1,<2025.6.dev0
     - distributed >=2025.5.1,<2025.6.dev0
-    - fvgp =4.8.8
+    - fvgp =4.9.2
     - loguru
 
 tests:
@@ -38,7 +37,7 @@ tests:
       imports:
         - gpcam
       pip_check: true
-      python_version: 
+      python_version:
         - ${{ python_min }}
         - "*"
 
