@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: gpcam
   version: "8.6.1"
-  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -30,7 +29,7 @@ requirements:
     - scipy <1.17.0,>=1.16.0
     - dask-core >=2025.5.1,<2025.6.dev0
     - distributed >=2025.5.1,<2025.6.dev0
-    - fvgp =4.8.8
+    - fvgp =4.9.2
     - loguru
 
 tests:
